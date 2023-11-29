@@ -86,6 +86,7 @@ public class Main {
          default:
              System.out.println("К сожалению в году 12 месяцев.");
 
+
      }
 
     }
