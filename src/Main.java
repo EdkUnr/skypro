@@ -85,6 +85,8 @@ public class Main {
              break;
          default:
              System.out.println("В году 12 месяцев.");
+
+
      }
 
     }
