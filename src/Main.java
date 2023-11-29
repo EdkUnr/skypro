@@ -84,8 +84,7 @@ public class Main {
              System.out.println("Декабрь.Зима.");
              break;
          default:
-             System.out.println("В году 12 месяцев.");
-
+             System.out.println("К сожалению в году 12 месяцев.");
 
      }
 
