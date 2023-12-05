@@ -3,92 +3,99 @@ import com.sun.source.tree.IfTree;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World");
-    byte clientOS = 1;
-    if (clientOS == 1) {
-        System.out.println("Установите версию приложения для Android по ссылке.");
-    } else {
-        System.out.println("Установите версию приложения для iOS по ссылке.");
-    }
 
 
-    byte clientOS1 = 0;
-    short clientDeviceYear = 2015;
-    if (clientOS1 == 1 && clientDeviceYear > 2015) {
-        System.out.println("Установите версию приложения для Android по ссылке.");
-    } else {
-        System.out.println("Установите версию приложения для iOS по ссылке.");
+        int deposit = 15000;
+        int total = 0;
+        int month = 0;
+        while (total <= 2459000) {
+            System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
+            month++;
+            total = total + deposit;
         }
-    if (clientOS1 == 1 && clientDeviceYear < 2015) {
-        System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-    } else if (clientOS1 == 0 && clientDeviceYear < 2015) {
-        System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+
+
+      int i = 1;
+        while (i <= 10) {
+            System.out.print(i + " ");
+            i++;
+        }
+
+        System.out.println();
+
+
+        for (int a = 10; a>=0; a--) {
+            System.out.print(a + " ");
+        }
+        System.out.println();
+
+
+        int people = 12000000;
+        int born = 17;
+        int death = 8;
+        int year = 0;
+        int growth = people/1000 * (born - death);
+        while (year <= 10) {
+             people = people + growth;
+            System.out.println("Год " + year + ", численность населения равна " + people);
+            year++;
+        }
+
+        System.out.println();
+
+
+        int month1 = 0;
+        int total1 = 15000;
+        while (total1 <= 12000000) {
+            total1 = total1 + (total1/100) * 7;
+            System.out.println("Месяц " + month1 + " сумма накоплений равна " + total1);
+            month1++;
+        }
+
+        System.out.println();
+
+
+        int month2 = 0;
+        int total2 = 15000;
+        while (total2 <= 12000000) {
+            total2 = total2 + (total2/100) * 7;
+            month2++;
+            if (month2 % 6 == 0) {
+                System.out.println("Месяц " + month2 + " сумма накоплений равна " + total2);
+            }
+        }
+
+        System.out.println();
+
+
+        int month3 = 0;
+        int total3 = 15000;
+        while (month3 <= 108) {
+            total3 = total3 + (total3/100) * 7;
+            month3++;
+            if (month3 % 6 == 0) {
+                System.out.println("Месяц " + month3 + " сумма накоплений равна " + total3);
+            }
+        }
+
+        System.out.println();
+
+
+        for (int friday = 3; friday < 31; friday = friday +7){
+            System.out.println("Сегодня пятница " + friday + " -е число. Необходимо подготовить отчёт" );
+        }
+
+        System.out.println();
+
+
+        int past = 1823;
+        int present = 2023;
+        int future = 2123;
+        for (int y = 0; y < future; y = y + 79) {
+            if (y > past) {
+                System.out.println(y);
+            }
+        }
+    }
     }
 
-
-    int year = 2014;
-    if(((year % 4 == 0) && (year % 100 != 0))) {
-        System.out.println(year + " год является високосным.");
-    } else {
-        System.out.println(year + " год не является високосным.");
-    }
-
-
-     short deliveryDistance = 95;
-     int days = 1;
-     if (deliveryDistance > 0 && deliveryDistance < 20) {
-         System.out.println("Потребуется " + days + " день.");
-     }
-     if (deliveryDistance > 20 && deliveryDistance < 60) {
-         System.out.println("Потребуется " + (days + 1) + " дня.");
-     } else if (deliveryDistance > 60 && deliveryDistance <100) {
-         System.out.println("Потребуется " + (days + 2) + " дня.");
-     } else {
-         System.out.println("Свыше 100км доставки нет.");
-     }
-
-     int month = 5;
-     switch (month) {
-         case 1:
-             System.out.println("Январь.Зима.");
-             break;
-         case 2:
-             System.out.println("Февраль.Зима.");
-             break;
-         case 3:
-             System.out.println("Март.Весна.");
-             break;
-         case 4:
-             System.out.println("Апрель.Весна.");
-             break;
-         case 5:
-             System.out.println("Май.Весна.");
-             break;
-         case 6:
-             System.out.println("Июнь.Лето.");
-             break;
-         case 7:
-             System.out.println("Июль.Лето.");
-             break;
-         case 8:
-             System.out.println("Август.Лето.");
-             break;
-         case 9:
-             System.out.println("Сентябрь.Осень.");
-             break;
-         case 10:
-             System.out.println("Октябрь.Осень.");
-             break;
-         case 11:
-             System.out.println("Ноябрь.Осень.");
-             break;
-         case 12:
-             System.out.println("Декабрь.Зима.");
-             break;
-         default:
-             System.out.println("К сожалению в году 12 месяцев.");
-
-
-     }
-
-    }
-    }
