@@ -1,94 +1,56 @@
-import com.sun.source.tree.IfTree;
+import java.util.Arrays;
 
 public class Main {
+    static int[] arr = new int[3];
+    static {
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 3;
+    }
+
+    static double[] arr2 = {1.57, 7.654, 9.986};
+    static int[] mass = {3, 4, 18, 23, 56, 31, 57};
+
     public static void main(String[] args) {
-        System.out.println("Hello World");
-    byte clientOS = 1;
-    if (clientOS == 1) {
-        System.out.println("Установите версию приложения для Android по ссылке.");
-    } else {
-        System.out.println("Установите версию приложения для iOS по ссылке.");
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr2));
+        System.out.println(Arrays.toString(mass));
+
+        printArrayInReverse(arr);
+        printArrayInReverse(arr2);
+        printArrayInReverse(mass);
+
+        makeOddNumbersEven(arr);
+        makeOddNumbersEven(mass);
+
     }
 
-
-    byte clientOS1 = 0;
-    short clientDeviceYear = 2015;
-    if (clientOS1 == 1 && clientDeviceYear > 2015) {
-        System.out.println("Установите версию приложения для Android по ссылке.");
-    } else {
-        System.out.println("Установите версию приложения для iOS по ссылке.");
+    public static void printArrayInReverse(int[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
         }
-    if (clientOS1 == 1 && clientDeviceYear < 2015) {
-        System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-    } else if (clientOS1 == 0 && clientDeviceYear < 2015) {
-        System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
+        System.out.println();
     }
 
-
-    int year = 2014;
-    if(((year % 4 == 0) && (year % 100 != 0))) {
-        System.out.println(year + " год является високосным.");
-    } else {
-        System.out.println(year + " год не является високосным.");
+    public static void printArrayInReverse(double[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
     }
 
-
-     short deliveryDistance = 95;
-     int days = 1;
-     if (deliveryDistance > 0 && deliveryDistance < 20) {
-         System.out.println("Потребуется " + days + " день.");
-     }
-     if (deliveryDistance > 20 && deliveryDistance < 60) {
-         System.out.println("Потребуется " + (days + 1) + " дня.");
-     } else if (deliveryDistance > 60 && deliveryDistance <100) {
-         System.out.println("Потребуется " + (days + 2) + " дня.");
-     } else {
-         System.out.println("Свыше 100км доставки нет.");
-     }
-
-     int month = 5;
-     switch (month) {
-         case 1:
-             System.out.println("Январь.Зима.");
-             break;
-         case 2:
-             System.out.println("Февраль.Зима.");
-             break;
-         case 3:
-             System.out.println("Март.Весна.");
-             break;
-         case 4:
-             System.out.println("Апрель.Весна.");
-             break;
-         case 5:
-             System.out.println("Май.Весна.");
-             break;
-         case 6:
-             System.out.println("Июнь.Лето.");
-             break;
-         case 7:
-             System.out.println("Июль.Лето.");
-             break;
-         case 8:
-             System.out.println("Август.Лето.");
-             break;
-         case 9:
-             System.out.println("Сентябрь.Осень.");
-             break;
-         case 10:
-             System.out.println("Октябрь.Осень.");
-             break;
-         case 11:
-             System.out.println("Ноябрь.Осень.");
-             break;
-         case 12:
-             System.out.println("Декабрь.Зима.");
-             break;
-         default:
-             System.out.println("К сожалению в году 12 месяцев.");
-
-
-     }
-
+    public static void makeOddNumbersEven(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0) {
+                array[i]++;
+            }
+        }
     }
-    }
+}
+
